@@ -1,0 +1,24 @@
+.homeText {
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    padding: 10px;
+}
+
+.joinButton {
+    background-image: linear-gradient(to right, #b6fbff, #83a4d4);
+    border: solid white 5px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 25%;
+    margin-top: 10px;
+}
+
+.createButton {
+    background-image: linear-gradient(to right, #b6fbff, #83a4d4);
+    border: solid white 5px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 31%;
+    margin-top: 10px;
+}

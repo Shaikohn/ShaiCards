@@ -2,6 +2,7 @@
     /* background: linear-gradient(110deg, rgb(39, 21, 204) 60%, #3328ca 60%); */
     background: linear-gradient(110deg, rgb(4, 0, 39) 60%, #1c185e 60%);
     border: white solid 10px; 
+    border-radius: 20px;
     position: fixed;
     color: white;
     font-size: 20px;

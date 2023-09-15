@@ -7,7 +7,7 @@ const Card = () => {
             <div className="card-body">
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
             </div>
-            <p className='ms-3'>@Tu vieja</p>
+            <p className='ms-3'>@Shai</p>
         </div>
     )
 }

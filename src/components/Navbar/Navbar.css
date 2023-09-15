@@ -1,0 +1,11 @@
+.navTitle {
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    margin-left: 17%;
+}
+
+.navBackground {
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
