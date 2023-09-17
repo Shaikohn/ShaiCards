@@ -1,12 +1,12 @@
 import axios from "axios"
 import Swal from "sweetalert2"
-import { getAllUnconfirmedQuestions } from "../slices/unconfirmedQuestionSlice"
+import { getAllUnconfirmedCards } from "../slices/unconfirmedCardSlice"
 
-export const getUnconfirmedQuestions = (setLoading) => async(dispatch) => {
+export const getUnconfirmedCards = (setLoading) => async(dispatch) => {
     setLoading(true)
     try {
-        const { data } = await axios.get('/unconfirmedQuestions/all')
-        dispatch(getAllUnconfirmedQuestions(data))
+        const { data } = await axios.get('/unconfirmedCards/all')
+        dispatch(getAllUnconfirmedCards(data))
         setLoading(false)
     }
     catch(e) {
@@ -15,18 +15,18 @@ export const getUnconfirmedQuestions = (setLoading) => async(dispatch) => {
     }
 }
 
-export const addUnconfirmedQuestion = (questionData, closeQuestionModal, e, setQuestionData, initialState, setLoading) => async(dispatch) => {
+export const addUnconfirmedCard = (cardData, closeCardModal, e, setCardData, initialState, setLoading) => async(dispatch) => {
     setLoading(true)
     try {
-        const { data } = await axios.post(`/unconfirmedQuestions/nuevaPreguntaSinConfirmar`, questionData)
+        const { data } = await axios.post(`/unconfirmedCards/addUnconfirmedCard`, cardData)
         dispatch(data)
         setLoading(false)
-        closeQuestionModal()
+        closeCardModal()
         e.target.reset()
-        setQuestionData(initialState)
+        setCardData(initialState)
         Swal.fire({
             title: "Éxito",
-            text: "Tu pregunta será agregada pronto!",
+            text: "Tu carta será agregada pronto!",
             icon: "success",
             background: "#1a1a1a",
             color: '#fff',
@@ -48,11 +48,11 @@ export const addUnconfirmedQuestion = (questionData, closeQuestionModal, e, setQ
 
 export const deleteUnconfirmedQuestion = (_id, forceUpdate) => async() => {
     try {
-        await axios.delete(`/unconfirmedQuestions/${_id}`)
+        await axios.delete(`/unconfirmedCards/${_id}`)
         forceUpdate()
         Swal.fire({
             title: "Éxito",
-            text: "Pregunta eliminada!",
+            text: "Carta eliminada!",
             icon: "success",
             timer: 2000,
             background: "#1a1a1a",
