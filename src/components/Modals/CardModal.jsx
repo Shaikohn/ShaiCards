@@ -60,8 +60,6 @@ export default function CardModal({isOpenCardModal, closeCardModal}) {
             dispatch(addUnconfirmedCard(cardData, forceUpdate, e, setCardData, initialState, setLoading))
         }
     }
-
-    console.log(cardData)
     
     return (
         <Modals isOpenModal={isOpenCardModal} closeModal={closeCardModal}>
